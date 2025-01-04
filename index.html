@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Reset básico para garantir consistência */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1e3d58;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Seção principal */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .intro {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* Garantir que a imagem seja responsiva e não fique gigantesca */
+        .intro img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover; /* A imagem vai preencher o espaço sem distorcer */
+        }
+
+        /* Chamada para ação (CTA) */
+        .cta {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta:hover {
+            background-color: #45a049;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1e3d58;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .intro {
+                padding: 30px;
+            }
+
+            .cta {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .cta {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Nome da Empresa</h1>
+        <p>Transforme seu negócio com nossas soluções inovadoras.</p>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <div class="intro">
+            <h2>Leve seu negócio para o próximo nível</h2>
+            <p>Com nossas soluções personalizadas, ajudamos empresas como a sua a alcançar resultados excepcionais. Veja o que podemos fazer por você!</p>
+            <img src="images/test.png" alt="Imagem ilustrativa do produto ou serviço">
+        </div>
+
+        <a href="#contato" class="cta">Fale Conosco</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nome da Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
