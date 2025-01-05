@@ -4,143 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <style>
-        /* Reset básico para garantir consistência */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Corpo da página */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Cabeçalho */
-        header {
-            background-color: #1e3d58;
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        /* Seção principal */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .intro {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            margin-bottom: 50px;
-        }
-
-        /* Garantir que a imagem seja responsiva e não fique gigantesca */
-        .intro img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover; /* A imagem vai preencher o espaço sem distorcer */
-        }
-
-        /* Chamada para ação (CTA) */
-        .cta {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta:hover {
-            background-color: #45a049;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #1e3d58;
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            header p {
-                font-size: 16px;
-            }
-
-            .intro {
-                padding: 30px;
-            }
-
-            .cta {
-                font-size: 18px;
-                padding: 12px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 24px;
-            }
-
-            header p {
-                font-size: 14px;
-            }
-
-            .cta {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
-        <h1>Nome da Empresa</h1>
-        <p>Transforme seu negócio com nossas soluções inovadoras.</p>
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- Título -->
+            <h1 class="m-0">Potencialize seu negócio com a agência Onn.Digital</h1>
+            
+            <!-- Redes Sociais -->
+            <div class="social-icons">
+                <a href="https://instagram.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://web.whatsapp.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <section>
-        <div class="intro">
-            <h2>Leve seu negócio para o próximo nível</h2>
-            <p>Com nossas soluções personalizadas, ajudamos empresas como a sua a alcançar resultados excepcionais. Veja o que podemos fazer por você!</p>
-            <img src="images/test.png" alt="Imagem ilustrativa do produto ou serviço">
+    <section id="carousel-section">
+        <div class="container py-5">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/banner1.png" class="d-block w-100" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/banner2.jpg" class="d-block w-100" alt="Imagem 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
         </div>
-
-        <a href="#contato" class="cta">Fale Conosco</a>
     </section>
 
+    
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <!-- Tornando o título clicável -->
+            <h3 class="text-center">
+                <a href="#services" class="services-text">
+                    Conheça nossos serviços abaixo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </a>
+            </h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <div class="col service-item" data-service-name="Curso Técnico de Enfermagem Presencial">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Curso Técnico de Enfermagem Presencial</h4>
+                    <p>Oferecemos uma formação completa com aulas teórico-práticas, professores experientes e visitas a locais específicos para cada especialidade.</p>
+                    <p>Saiba mais</p>
+                </div>
+                <div class="col service-item" data-service-name="Qualificações & Aprimoramentos">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Qualificações & Aprimoramentos</h4>
+                    <p>Esta categoria serve para adicionar habilitações para alunos em formação e profissionais formados que podem ser usados para promoção de cargos e provas de títulos em seleções.</p>
+                    <p>Saiba mais</p>
+                </div>
+                <div class="col service-item" data-service-name="Cursos Profissionalizantes">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Cursos Profissionalizantes</h4>
+                    <p>São vantajosos por possuir uma alta demanda do mercado de trabalho e poder realizá-los em um curto período de tempo com qualidade e aulas práticas simuladas de campo.</p>
+                    <p>Saiba mais</p>
+                </div>
+                <div class="col service-item" data-service-name="Treinamentos In Company">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Treinamentos In Company</h4>
+                    <p>Sob medida para atender às necessidades exclusivas da sua equipe de saúde. Nossos instrutores altamente qualificados adaptam os programas de treinamento para corresponder aos requisitos específicos da sua instituição.</p>
+                    <p>Saiba mais</p>
+                </div>
+                <div class="col service-item" data-service-name="Eventos">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Eventos</h4>
+                    <p>São oportunidades únicas de aprendizado e networking na área de saúde. Oferecemos uma ampla variedade de eventos, incluindo seminários, palestras, workshops e conferências, destinados a profissionais de saúde.</p>
+                    <p>Saiba mais</p>
+                </div>
+                <div class="col service-item" data-service-name="Cursos Preparatórios">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Cursos Preparatórios</h4>
+                    <p>Realizamos cursos preparatórios 100% presenciais, exclusivos para área de saúde para nível técnico, superior, realizamos no estado de Pernambuco e região Nordeste.</p>
+                    <p>Saiba mais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sobre-nos" class="sobre-nos">
+        <h2>Sobre a [Nome da empresa]</h2>
+        <p>Somos uma empresa dedicada a oferecer os melhores serviços na área de [descreva a área ou os serviços]. Nosso compromisso é proporcionar qualidade, inovação e um atendimento personalizado para nossos clientes. Com uma equipe experiente e apaixonada pelo que faz, buscamos sempre superar as expectativas e transformar cada experiência em um sucesso.</p>
+        <p>Nossa missão é [descrever missão], e nossa visão é [descrever visão]. Estamos aqui para ajudar você a alcançar seus objetivos com excelência e dedicação.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="contact-row">
+                <!-- Conteúdo à esquerda -->
+                <div class="contact-left">
+                    <h3>Informações sobre a [NOME DA EMPRESA]</h3>
+                    <p>Preencha o formulário à direita para entrar em contato diretamente conosco pelos nossos canais de atendimento. Estamos aqui para ajudar você!</p>
+                    <p>Telefone/WhatsApp: (81) 4002-8922</p>
+                    <p>Email: contato@onn.digital</p>
+                    <!-- Maps -->
+                    <section id="location" style="margin-left: -5%;">
+                        <div class="container">
+                            <h3 class="text-Start">Nossa Localização</h3>
+                            <div id="map"></div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Formulário à direita -->
+                <div class="contact-right">
+                    <h3 class="text-start">Entre em contato para mais informações:</h3>
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu melhor e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="7" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="button" onclick="sendToWhatsApp()">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div id="chatbot-container">
+        <div id="chatbot-icon">
+            <img id="chatbot" width="35" height="35" src="https://img.icons8.com/?size=100&id=LRgzCke03q2t&format=png&color=FFFFFF" alt="message-bot"/>
+        </div>
+    
+        <div id="chatbot-popup">
+            <div id="chatbot-header">
+                <span>Serei seu assistente virtual :)</span>
+                <button id="close-chat">X</button>
+            </div>
+            <hr>
+            <div id="chatbot-messages"></div>
+            <div id="chatbot-input">
+                <input type="text" id="user-message" placeholder="Digite sua mensagem..." />
+                <button id="send-message">Enviar</button>
+            </div>
+        </div>
+    </div>
+    
+    
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Nome da Empresa. Todos os direitos reservados.</p>
+    <footer class="text-center py-3">
+        <p>&copy; <span id="year"></span> <a href="#">Onn.digital</a> - Transformando ideias em realidade</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
