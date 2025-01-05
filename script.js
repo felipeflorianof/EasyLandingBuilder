@@ -1,14 +1,14 @@
     /* Maps */
-    const map = L.map('map').setView([-7.938746, -34.824908], 17);
+    const map = L.map('map').setView([-8.060178, -34.884387], 17);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([-7.938746, -34.824908])
+    L.marker([-8.060178, -34.884387])
         .addTo(map)
-        .bindPopup('Mercadinho Air<br>Avenida Doutor Cláudio José Gueiros Leite.')
+        .bindPopup('Exemplo de endereco<br>Avenida Exemplo apenas pra fins demonstrativos.')
         .openPopup();
 
 
