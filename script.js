@@ -8,7 +8,7 @@
 
     L.marker([-8.060178, -34.884387])
         .addTo(map)
-        .bindPopup('Exemplo de endereco<br>Avenida Exemplo apenas pra fins demonstrativos.')
+        .bindPopup('Exemplo de endereco<br>apenas pra fins demonstrativos.')
         .openPopup();
 
 
